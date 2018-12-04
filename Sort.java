@@ -6,5 +6,8 @@ public static void selectionsort(int [] ary) {
     if ( (Math.min(ary[i], ary[i + 1])) = ary[i]) {
       ary[i] = ary[0];
     }
+    if ( (Math.max(ary[i], ary[i - 1])) = ary[i]) {
+      ary[i] = ary[ary.length - 1];
+    }
   }
 }
