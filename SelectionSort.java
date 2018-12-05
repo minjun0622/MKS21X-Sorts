@@ -1,19 +1,17 @@
 public class SelectionSort {
 
 //Minjun Seo
-int min;
-int index;
 public static void selectionsort(int [] ary) {
   for (int i = 0; i < ary.length - 1; i++) {
-    index = i;
-    ary[i] = min;
+     int small = i;
     //put x = i + 1, it is the same thing as having the i + 1 when I was trying to find the array earlier.
     for (int x = i + 1; x < ary.length; x++) {
-      if (min > ary[x]) {
-        ary [x] = min;
+      if (ary[small] > ary[x]) {
+        x = small;
       }
     }
-    ary[i] = min;
+    ary [i] = ary[small];
+    ary [small] = ary[i];
   }
 }
 
