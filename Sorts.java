@@ -1,4 +1,8 @@
-public class Sort {
+public class Sorts {
+  /**Selection sort of an int array.
+  *Upon completion, the elements of the array will be in increasing order.
+  *@param data  the elements to be sorted.
+  */
 
 //Minjun Seo
 public static void selectionsort(int [] ary) {
@@ -15,6 +19,18 @@ public static void selectionsort(int [] ary) {
     ary [small] = ary[i];
     ary[i] = y;
   }
+}
+
+  public static void selectionSort(int[] data){
+
+
+  /**Bubble sort of an int array.
+  *Upon completion, the elements of the array will be in increasing order.
+  *@param data  the elements to be sorted.
+  */
+}
+  public static void bubbleSort(int[] data){
+
 }
 
 public static String printArray(int[] ary) {
