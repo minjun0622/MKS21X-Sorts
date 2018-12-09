@@ -4,34 +4,33 @@ public class Sorts {
   *@param data  the elements to be sorted.
   */
 
-//Minjun Seo
-public static void selectionsort(int [] ary) {
-  for (int i = 0; i < ary.length - 1; i++) {
+public static void selectionSort(int [] data) {
+  for (int i = 0; i < data.length - 1; i++) {
      int small = i;
     //put x = i + 1, it is the same thing as having the i + 1 when I was trying to find the array earlier.
-    for (int x = i + 1; x < ary.length; x++) {
-      if (ary[x] == (Math.min(ary[x], ary[small]))) {
+    for (int x = i + 1; x < data.length; x++) {
+      if (data[x] == (Math.min(data[x], data[small]))) {
         small = x;
       }
         //Since it compares the number with the number that comes right after it, we can find the minimum of those two numbers.
       }
-    int y = ary[small];
-    ary [small] = ary[i];
-    ary[i] = y;
+    int y = data[small];
+    data [small] = data[i];
+    data[i] = y;
   }
 }
 
-  public static void selectionSort(int[] data){
-
-
-  /**Bubble sort of an int array.
-  *Upon completion, the elements of the array will be in increasing order.
-  *@param data  the elements to be sorted.
-  */
-}
   public static void bubbleSort(int[] data){
-
-}
+    for (int i = 0; i < data.length - 1; i++) {
+      for (int x = i + 1; x < data.length; x++) {
+        if (data[x] < data[i]) {
+          int temp = data[i];
+          data[i] = data[x];
+          data[x] = temp;
+        }
+      }
+    }
+  }
 
 public static String printArray(int[] ary) {
     String output = "[";
