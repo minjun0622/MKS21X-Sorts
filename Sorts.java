@@ -1,4 +1,5 @@
 public class Sorts {
+
   /**Selection sort of an int array.
   *Upon completion, the elements of the array will be in increasing order.
   *@param data  the elements to be sorted.
@@ -22,11 +23,15 @@ public static void selectionSort(int [] data) {
 
   public static void bubbleSort(int[] data){
     for (int i = 0; i < data.length - 1; i++) {
+      //first loop that is the first of the two.
       for (int x = i + 1; x < data.length; x++) {
+        //the second intger that is one place bigger than the last one.
         if (data[x] < data[i]) {
+          //if the seocnd one is less than the first,
           int temp = data[i];
           data[i] = data[x];
           data[x] = temp;
+          //we switch the position.
         }
       }
     }
@@ -39,7 +44,7 @@ public static String printArray(int[] ary) {
     }
     return output += ary[ary.length-1] + "]";
 }
-
+/*
 public static void main(String[] args) {
 
     // Google random int generator
@@ -52,7 +57,7 @@ public static void main(String[] args) {
 
     //selectionsort(test_a);
     bubbleSort(test_a);
-    
+
     sorted = printArray(test_a);
     System.out.println(sorted);               // [1, 2, 3, 4, 6, 6, 7, 8]
 
@@ -95,4 +100,6 @@ public static void main(String[] args) {
     }
 
   }
+
+*/
 }
