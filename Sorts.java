@@ -39,11 +39,10 @@ public static void selectionSort(int [] data) {
   }
 
   public static void insertionSort(int[] data) {
-    int temp;
-    //temporary variable is needed to store.
     for (int i = 1; i < data.length; i++) {
-      temp = data[i];
-      while (i != 0 && temp < data[i -1]) {
+      int temp = data[i];
+      //temporary variable is needed to store.
+      while (i > 0 && temp < data[i - 1]) {
         data[i] = data[i - 1];
         //swapping of value
         i--;
