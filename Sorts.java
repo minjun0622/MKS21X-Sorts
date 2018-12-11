@@ -41,14 +41,14 @@ public static void selectionSort(int [] data) {
   public static void insertionSort(int[] data) {
     int temp;
     //temporary variable is needed to store.
-    for (int i = 1; i < data.length; i++) {
-      if (data[i] < data[i-1]) {
-        temp = data[i];
+    for (int i = 1; i < data.length - 1; i++) {
+      temp = data[i];
+      while (temp < data[i -1] && i != 0) {
         data[i] = data[i - 1];
-        data[i -1] = temp;
+        i--;
       }
-    }
-  }
+      }
+      }
 
 public static String printArray(int[] ary) {
     String output = "[";
