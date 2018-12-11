@@ -45,9 +45,12 @@ public static void selectionSort(int [] data) {
       temp = data[i];
       while (i != 0 && temp < data[i -1]) {
         data[i] = data[i - 1];
+        //swapping of value
         i--;
+        //reduce the loop by doing this and therefore, we get closer to the end.
       }
       data[i] = temp;
+      //store current value into a temporary value.
       }
       }
 
