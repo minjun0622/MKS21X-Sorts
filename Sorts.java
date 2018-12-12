@@ -1,4 +1,12 @@
 public class Sorts {
+  public static boolean sorted (int[] data) {
+    for (int i = 0; i < data.length; i++ {
+      if (data[i] > data[i + 1]) {
+        return false;
+      }
+    }
+      return false;
+  }
 
   /*
   *Selection sort of an int array.
@@ -7,6 +15,9 @@ public class Sorts {
   */
 
 public static void selectionSort(int [] data) {
+  if (sorted(data)) {
+    return data;
+  }
   for (int i = 0; i < data.length - 1; i++) {
      int small = i;
     //put x = i + 1, it is the same thing as having the i + 1 when I was trying to find the array earlier.
@@ -23,6 +34,9 @@ public static void selectionSort(int [] data) {
 }
 
   public static void bubbleSort(int[] data){
+    if (sorted(data)) {
+      return data;
+    }
     for (int i = 0; i < data.length - 1; i++) {
       //first loop that is the first of the two.
       for (int x = i + 1; x < data.length; x++) {
@@ -39,6 +53,9 @@ public static void selectionSort(int [] data) {
   }
 
   public static void insertionSort(int[] data) {
+    if (sorted(data)) {
+      return data;
+    }
     for (int i = 1; i < data.length; i++) {
       int temp = data[i];
       //temporary variable is needed to store.
